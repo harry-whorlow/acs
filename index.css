@@ -10,7 +10,127 @@
 }
 /* header */
 
+header {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    top: 20px;
+    right: 20px;
+}
+
+.menu-button {
+    width: 50px;
+    height: 33px;
+
+    margin: 20px;
+
+    transform: rotate(180deg);
+}
+
+.menu-button:hover .menu-button-line:nth-child(1) {
+    animation: slide 1s infinite;
+}
+.menu-button:hover .menu-button-line:nth-child(2) {
+    animation: slide 2s infinite;
+}
+.menu-button:hover .menu-button-line:nth-child(3) {
+    animation: slide 1.4s infinite;
+}
+
+.menu-button-line {
+    height: 4px;
+    width: 50px;
+    margin-bottom: 10px;
+    background: #fff;
+    transition: 0.3s;
+    transition-timing-function: linear;
+}
+
+.menu-button.close .menu-button-line:nth-child(1) {
+    background: rgb(216, 137, 52);
+    transform: rotate(45deg) translate(-10px, 0px);
+    transition: 1.2s;
+    animation: none;
+}
+.menu-button.close .menu-button-line:nth-child(2) {
+    opacity: 0;
+}
+.menu-button.close .menu-button-line:nth-child(3) {
+    background: rgb(216, 137, 52);
+    transform: rotate(-45deg) translate(20px, -30px);
+    transition: 1.2s;
+    animation: none;
+}
+
+@keyframes slide {
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        width: 50px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+nav {
+    position: absolute;
+    top: -1000px;
+    right: 60px;
+
+    transition: 1s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav-ul li {
+    margin: 40px;
+}
+
+#nav-ul li a {
+    font-family: var(--primary);
+    font-size: 20px;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.nav-show {
+    visibility: visible;
+}
+
+#socials {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+#socials svg {
+    height: 50px;
+    width: 50px;
+
+    margin-bottom: 20px;
+
+    fill: #fff;
+}
 /* main */
+
+main {
+    overflow: hidden;
+}
 
 #landing {
     height: 90vh;
@@ -35,17 +155,21 @@
 }
 
 #landing h1 {
+    height: 200px;
+
     color: white;
 
     font-family: var(--accent);
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 200px;
+    line-height: 200px;
 }
 #landing h2 {
-    color: white;
+    color: rgb(216, 137, 52);
 
     font-family: var(--primary);
     font-size: 1rem;
+    text-align: right;
 }
 
 /* cards */
@@ -271,6 +395,13 @@
     flex-direction: column;
 
     background-color: rgba(235, 229, 231, 0.541);
+
+    transition: 1s;
+}
+
+.values:hover {
+    transform: scale(1.07);
+    background-color: rgba(235, 229, 231, 0.841);
 }
 
 .vl {
@@ -319,9 +450,9 @@
 /* testimonies */
 
 #testimonies {
-    height: 100vh;
+    height: 1100px;
 
-    padding: 50px 30px;
+    padding: 40px 30px;
 
     display: flex;
     flex-direction: column;
@@ -341,9 +472,111 @@
     width: 100%;
     height: 100%;
 
+    padding: 40px 30px;
+
     display: inline-flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .testimony {
+    margin: 20px;
+    padding: 20px;
+
+    height: min-content;
+    transition: 1s;
+}
+.testimony:hover {
+    transform: scale(1.03);
+}
+
+#testimonies .testimony h2 {
+    font-size: 24px;
+}
+
+#testimonies .tall {
+    width: 250px;
+
+    border-left: 1px solid rgb(78, 74, 76);
+    border-right: 1px solid rgb(78, 74, 76);
+}
+
+#testimonies .tall h2 {
+    font-family: var(--primary);
+}
+
+#testimonies .wide {
+    width: 450px;
+
+    border-top: 1px solid rgb(78, 74, 76);
+    border-bottom: 1px solid rgb(78, 74, 76);
+}
+
+#testimonies .wide h2 {
+    font-family: var(--accent);
+}
+
+.testimony p {
+    font-size: 16px;
+
+    margin-top: 10px;
+}
+
+/* footer */
+
+footer {
+    height: 150px;
+    width: 100vw;
+
+    background-color: rgb(71, 62, 65);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul {
+    width: 80%;
+
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer li {
+    transition: 2s;
+}
+
+footer li:hover {
+    transform: scale(1.1);
+}
+
+footer a {
+    font-family: var(--primary);
+    font-size: 40px;
+
+    color: rgb(238, 238, 238);
+
+    transition: 1s;
+}
+
+footer li:hover a {
+    color: rgb(216, 137, 52);
+}
+
+#cBand {
+    width: 100%;
+
+    font-family: var(--accent);
+    font-size: 16px;
+    font-weight: 500;
+
+    color: rgb(238, 238, 238);
+
+    margin-top: 50px;
+    padding-left: 20px;
 }
