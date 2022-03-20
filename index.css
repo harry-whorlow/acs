@@ -1,0 +1,349 @@
+:root {
+    --primary: "Inria Serif", serif;
+    --accent: "Roboto", sans-serif;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+
+    box-sizing: border-box;
+}
+/* header */
+
+/* main */
+
+#landing {
+    height: 90vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+            0deg,
+            rgba(41, 35, 37, 0.3),
+            rgba(41, 35, 37, 0.3)
+        ),
+        url("/assets/landingPage.jpg");
+    background-size: cover;
+}
+
+#landing .container {
+    padding-bottom: 10rem;
+}
+
+#landing h1 {
+    color: white;
+
+    font-family: var(--accent);
+    font-weight: 900;
+    font-size: 5rem;
+}
+#landing h2 {
+    color: white;
+
+    font-family: var(--primary);
+    font-size: 1rem;
+}
+
+/* cards */
+#cards {
+    height: 90vh;
+    width: 100%;
+
+    background-color: rgb(219, 220, 221);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-x: hidden;
+}
+
+#cards #text {
+    margin: 10rem;
+}
+
+#cards h2 {
+    color: rgb(90, 88, 88);
+
+    font-family: var(--accent);
+    font-size: 8rem;
+}
+
+#cards article {
+    width: 30rem;
+
+    color: rgb(90, 88, 88);
+
+    font-size: 20px;
+    font-family: var(--primary);
+}
+
+#cards article i {
+    color: rgb(216, 137, 52);
+}
+
+.card {
+    padding: 40px 10px;
+
+    position: absolute;
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "name article";
+
+    transition: 1s ease-in-out;
+}
+
+.card:hover {
+    transform: translateX(-10px);
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    grid-area: name;
+}
+
+.card h3 {
+    font-family: var(--accent);
+    font-size: 25px;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+
+    color: rgb(236, 236, 236);
+
+    margin: 0px 15px;
+
+    text-decoration: underline;
+}
+
+.card-article {
+    grid-area: article;
+    padding: 0px 20px;
+    height: 100%;
+}
+
+.card:nth-child(odd) h3 {
+    color: rgb(90, 88, 88);
+}
+
+/* card 1 */
+
+#card1 {
+    height: 80vh;
+    width: 710px;
+
+    background-color: rgb(78, 74, 76);
+
+    position: absolute;
+    z-index: 3;
+
+    right: -600px;
+    bottom: 0px;
+}
+
+#card-article1 {
+    height: calc(80vh - 60px);
+    width: 100%;
+
+    display: flex;
+}
+
+#card1 img {
+    width: 400px;
+}
+
+#card-article1 article {
+    width: 40%;
+
+    padding-right: 15px;
+
+    color: rgb(236, 236, 236);
+}
+
+/* card 2 */
+
+#card2 {
+    height: 70vh;
+    width: 810px;
+
+    background-color: rgb(216, 137, 52);
+
+    position: absolute;
+    z-index: 2;
+
+    right: -600px;
+    bottom: 0px;
+}
+
+#card-article2 {
+    height: 100%;
+    width: 630px;
+}
+
+#card2 img {
+    width: 100%;
+
+    margin-top: 40px;
+}
+
+#card-article2 article {
+    text-align: center;
+
+    width: 100%;
+}
+
+/* card 3 */
+
+#card3 {
+    height: 60vh;
+    width: 910px;
+
+    background-color: rgb(71, 62, 65);
+
+    position: absolute;
+    z-index: 1;
+
+    right: 0px;
+    bottom: 0px;
+}
+
+#card-article3 {
+    height: 100%;
+    width: 630px;
+}
+
+#card3 img {
+    width: 100%;
+    float: right;
+
+    margin-bottom: 20px;
+}
+
+#card-article3 article {
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    color: rgb(219, 220, 221);
+}
+
+/* values */
+
+#values {
+    height: 90vh;
+    width: 100%;
+
+    background: linear-gradient(
+            35deg,
+            rgba(196, 192, 193, 0.541),
+            rgba(71, 71, 71, 0.5) 60%
+        ),
+        url(./assets/woodWork.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.values {
+    width: 400px;
+    height: 500px;
+    margin: 0px 30px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(235, 229, 231, 0.541);
+}
+
+.vl {
+    height: 100%;
+    width: 0px;
+    border-left: 2px solid rgb(112, 113, 114);
+
+    margin: 0px 20px;
+}
+
+#values h2 {
+    font-family: var(--primary);
+    font-size: 110px;
+
+    color: rgb(216, 137, 52);
+
+    margin-top: 40px;
+}
+
+#values-text {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#values-text h3 {
+    font-family: var(--accent);
+    font-size: 50px;
+    text-align: center;
+
+    color: rgb(71, 62, 65);
+}
+
+#values-text article {
+    font-family: var(--primary);
+    font-size: 20px;
+    text-align: center;
+
+    color: rgb(71, 62, 65);
+
+    margin-top: 20px;
+}
+
+/* testimonies */
+
+#testimonies {
+    height: 100vh;
+
+    padding: 50px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(238, 238, 238);
+}
+
+#testimonies h2 {
+    font-family: var(--accent);
+    font-size: 100px;
+
+    color: rgb(78, 74, 76);
+}
+
+#testimonies-area {
+    width: 100%;
+    height: 100%;
+
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+.testimony {
+}
