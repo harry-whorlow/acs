@@ -11,7 +11,7 @@ function toggolmenu() {
     if (!showMenu) {
         menuButton.classList.add("close");
         showMenu = true;
-        nav.style.top = "0px";
+        nav.style.top = "-20px";
     } else {
         menuButton.classList.remove("close");
         showMenu = false;

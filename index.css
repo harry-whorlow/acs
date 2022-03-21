@@ -52,7 +52,7 @@ header {
 
 .menu-button.close .menu-button-line:nth-child(1) {
     background: rgb(216, 137, 52);
-    transform: rotate(45deg) translate(-10px, 0px);
+    transform: rotate(45deg) translate(10px, 10px);
     transition: 1.2s;
     animation: none;
 }
@@ -61,7 +61,7 @@ header {
 }
 .menu-button.close .menu-button-line:nth-child(3) {
     background: rgb(216, 137, 52);
-    transform: rotate(-45deg) translate(20px, -30px);
+    transform: rotate(-45deg) translate(10px, -10px);
     transition: 1.2s;
     animation: none;
 }
@@ -94,15 +94,22 @@ nav ul {
 
 #nav-ul li {
     margin: 40px;
+    width: 120px;
 }
 
 #nav-ul li a {
     font-family: var(--primary);
-    font-size: 20px;
+    font-size: 26px;
+    font-weight: 600;
 
-    color: white;
+    color: rgb(216, 137, 52);
 
     text-decoration: none;
+    display: block;
+}
+
+#nav-ul li:hover a {
+    color: white;
 }
 
 .nav-show {
@@ -125,6 +132,12 @@ nav ul {
     margin-bottom: 20px;
 
     fill: #fff;
+
+    transition: 1s;
+}
+
+#socials svg:hover {
+    transform: scale(1.1);
 }
 /* main */
 
@@ -133,7 +146,7 @@ main {
 }
 
 #landing {
-    height: 90vh;
+    height: 885px;
     width: 100%;
 
     display: flex;
@@ -174,7 +187,7 @@ main {
 
 /* cards */
 #cards {
-    height: 90vh;
+    height: 885px;
     width: 100%;
 
     background-color: rgb(219, 220, 221);
@@ -367,7 +380,7 @@ main {
 /* values */
 
 #values {
-    height: 90vh;
+    height: 1100px;
     width: 100%;
 
     background: linear-gradient(
