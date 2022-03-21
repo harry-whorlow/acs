@@ -146,8 +146,10 @@ main {
 }
 
 #landing {
-    height: 885px;
+    height: min-content;
     width: 100%;
+
+    padding: 100px;
 
     display: flex;
     flex-direction: column;
@@ -159,7 +161,7 @@ main {
             rgba(41, 35, 37, 0.3),
             rgba(41, 35, 37, 0.3)
         ),
-        url("../assets/kitchen2.jpg");
+        url("../assets/kitchen3.jpg");
     background-size: cover;
 }
 
@@ -177,110 +179,22 @@ main {
     font-size: 200px;
     line-height: 200px;
 }
-#landing h2 {
-    color: rgb(216, 137, 52);
+#landing-h2 {
+    color: rgb(71, 62, 65);
+
+    margin-top: 20px;
 
     font-family: var(--primary);
     font-size: 1rem;
     text-align: right;
 }
 
-/* about us */
+/* gallery content */
 
-#about-us {
+#gallery-content {
     height: min-content;
-    width: 100%;
 
     padding: 100px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#about-us h2 {
-    font-family: var(--primary);
-    font-size: 100px;
-
-    color: rgb(71, 62, 65);
-}
-
-#about-us article {
-    width: 600px;
-
-    margin-top: 30px;
-
-    font-family: var(--primary);
-    font-size: 18px;
-    text-align: center;
-}
-
-#team-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.team-card-tile {
-    height: 500px;
-    width: 400px;
-
-    margin: 100px 30px;
-
-    border: 1px solid black;
-
-    background-image: url("../assets/placeholder.png");
-    background-size: cover;
-
-    position: relative;
-}
-
-.text {
-    height: 500px;
-    width: 400px;
-
-    background-color: rgb(216, 137, 52);
-    opacity: 0;
-
-    z-index: 2;
-
-    position: absolute;
-
-    top: 0px;
-    left: 0px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    transition: 1s;
-
-    padding-top: 10px;
-}
-
-.text:hover {
-    opacity: 0.9;
-}
-
-.text h3 {
-    font-family: var(--accent);
-    font-size: 24px;
-
-    color: white;
-}
-
-#team-cards .text-article {
-    height: 500px;
-    width: 400px;
-
-    font-family: var(--primary);
-    text-align: center;
-
-    color: white;
-
-    margin: 20px;
-    padding: 10px;
 }
 
 /* footer */
